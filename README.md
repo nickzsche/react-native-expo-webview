@@ -26,4 +26,9 @@
  3. Tablar altında gördüğünüz Title etiketi altından ise sayfa başlıklarını değiştirmeniz mümkün. Yine tırnaklar arasına yazarak sayfaları isimlendirebilirsiniz.
  4. Iconları değiştirmek için ise [Iconların isimleri burada](https://icons.expo.fyi/ "Iconların isimleri burada") buradan istediğiniz iconu seçip orada kullanabilirsiniz. Size hangi satırı değiştirmeniz ve hangi satırı eklemeniz gerektiğini söyleyecektir.
  5. Sorularınız için istediğiniz zaman [Instagram](https://instagram.com/nickzsche "Instagram") ve [Linkedin](https://linkedin.com/nickzsche "Linkedin") üzerinden ulaşabilirsiniz. 
+ 6. Son olarak proje yapılandırıp Apk olarak çıktı almamız kaldı
+ 7. app.json dosyasını açın ve name yazan yere tırnaklar içinde uygulama adınızı girin. icon kısmını ise isterseniz sabit bırakabilirsiniz fakat kendi iconunuzun adını "icon.png" yaparak assets klasörüne atmayı unutmayın. 
+ 8. CMD/Terminal ile proje klasörüne gelin. Varsayılan olarak Masaüstü örneği vereyim. cd Desktop yazdıktan sonra cd cd react-native-expo-webview yazın. Çalışma klasörü içinde olacaksınız. Daha kolay yolu için ise cd yazdıktan sonra pencereye klasörü sürükleyip bırakın. 
+ 9. Son olarak terminale "expo build:android -t apk" (tırnaklar olmadan) yazarak çalışmayı başlatalım. Sizden bir paket adı isteyecek örnek vermek gerekir ise com.agarthadev.webview olarak kullandım ben. Siz de com.yourcompany.yourapp şeklinde istediğiniz şeyi yazabilirsiniz. Company kısmına şirket/şahıs adı yazın ve ardından yourapp kısmına uygulama adı verin. Türkçe karakter ve boşluk kullanmayın kelimeleri örnekte olduğu gibi yazabilirsiniz.
+ 10. Sizden expo hesabınıza giriş yapmanızı ya da yeni hesap açmanızı isteyecek. Tarayıcınıza expo yazıp kayıt olun ardından bilgiler ile giriş yapın. İşlemler bitince size bir link verecek oradan uygulamanızı indirebilirsiniz. 
 
