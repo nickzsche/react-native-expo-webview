@@ -1,6 +1,6 @@
 # WebView React Native App
 
-###Uygulamayı kendinize göre uyarlamak için yapmanız gereken bazı şeyler var. Adım adım hepsini göstereceğim.
+#Uygulamayı kendinize göre uyarlamak için yapmanız gereken bazı şeyler var. Adım adım hepsini göstereceğim.
 
 1. SPLASH SCREEN DEĞIŞTIRME:
 
