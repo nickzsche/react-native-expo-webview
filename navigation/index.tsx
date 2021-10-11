@@ -66,7 +66,7 @@ function BottomTabNavigator() {
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
-        //Buradan Başla
+        {/* //Buradan Başla */}
       <BottomTab.Screen
         name="TabOne"
         component={TabOneScreen}
@@ -74,7 +74,8 @@ function BottomTabNavigator() {
           title: 'Ana Sayfa',
           tabBarIcon: ({ color }) => <MaterialIcons name="home" size={32} color={color} />,
         })}
-      /> //Buraya dek sil veya kopyala
+      /> 
+      {/* //Buraya dek sil veya kopyala */}
       <BottomTab.Screen
         name="TabTwo"
         component={TabTwoScreen}

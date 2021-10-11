@@ -8,7 +8,7 @@ export default function TabThreeScreen() {
   return (
     <WebView 
     style={styles.container}
-    source={{ uri: 'https://www.ilimakademi.com.tr/hesabim/' }}
+    source={{ uri: 'https://www.udemy.com/user/sahan-hasret/' }}
   />
   );
 }

@@ -8,7 +8,7 @@ export default function TabFourScreen() {
   return (
     <WebView 
     style={styles.container}
-    source={{ uri: 'https://www.ilimakademi.com.tr/user-account/' }}
+    source={{ uri: 'https://nickzsche.github.io/agartha-auto-sql-map' }}
   />
   );
 }

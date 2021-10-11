@@ -1,16 +1,16 @@
 {
   "expo": {
-    "name": "İlim Akademi",
-    "slug": "Ilim_Akademi",
+    "name": "WebWiewAgartha",
+    "slug": "AgarthaAndUekApps",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/splash_screen.jpg",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash_image.png",
+      "image": "./assets/images/splash_screen.jpg",
       "resizeMode": "contain",
-      "backgroundColor": "#F2B91E"
+      "backgroundColor": "#231F20"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

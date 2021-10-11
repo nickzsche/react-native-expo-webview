@@ -8,7 +8,7 @@ export default function TabTwoScreen() {
   return (
     <WebView 
     style={styles.container}
-    source={{ uri: 'https://www.ilimakademi.com.tr/courses/' }}
+    source={{ uri: 'https://uekapps.github.io' }}
   />
   );
 }
