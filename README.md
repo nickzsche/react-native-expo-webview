@@ -5,7 +5,7 @@
 1. SPLASH SCREEN DEĞIŞTIRME:
 
 - Splash Screen değiştirmek için, "**assets**" klasörü içerisine girin, "**images**" isimli gördüğünüz klasörün içerisinde "**splash_image.png**" dosyasını göreceksiniz. Açılış sırasında çıkmasını istediğiniz **".png"** uzantılı dosyanızı yeniden isimlendirerek "**splash_image.png**" yapın ve buraya sürükleyip bırakın. Dosyayı değiştir deyin.
-- Ardından ana dizinde bulunan **"app.json"** dosyamız içerisinden **"backgroundColor": "#131c47"** yazan satırdan arkaplan renginizi değiştirin. Görsel bazen tam ekrana sığmayabiliyor. Şu an sarı durumda oraya isterseniz background:"white" gibi ifadeler verebilir ya da hex kodu olarak başına diyez koyup yerleştirebilirsiniz.
+- Ardından ana dizinde bulunan **"app.json"** dosyamız içerisinden **"backgroundColor": "#131c47"** yazan satırdan arkaplan renginizi değiştirin. Görsel bazen tam ekrana sığmayabiliyor. Şu an siyah durumda oraya isterseniz background:"white" gibi ifadeler verebilir ya da hex kodu olarak başına diyez koyup yerleştirebilirsiniz.
 
 2.SAYFALARI AYARLAMA:
 
