@@ -10,7 +10,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { ColorSchemeName, Pressable } from 'react-native';
 import { color } from 'react-native-reanimated';
-
+import { FontAwesome5 } from '@expo/vector-icons'; 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
@@ -26,6 +26,7 @@ import LinkingConfiguration from './LinkingConfiguration';
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
     <NavigationContainer
+    
       linking={LinkingConfiguration}
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <RootNavigator />
@@ -62,9 +63,16 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
+    
       initialRouteName="TabOne"
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme].tint,
+       
+        tabBarStyle: {
+          backgroundColor: '#000',
+          borderTopColor: 'transparent'
+        }
+        
+       
       }}>
         {/* //Buradan Başla */}
       <BottomTab.Screen
@@ -72,24 +80,50 @@ function BottomTabNavigator() {
         component={TabOneScreen}
         options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
           title: 'Ana Sayfa',
-          tabBarIcon: ({ color }) => <MaterialIcons name="home" size={32} color={color} />,
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#000000',
+          },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            color:"white",
+          },
+          
+          tabBarIcon: ({ color }) => <MaterialIcons name="home" size={24} color={"white"}  />,
         })}
       /> 
       {/* //Buraya dek sil veya kopyala */}
       <BottomTab.Screen
+      
         name="TabTwo"
         component={TabTwoScreen}
         options={{
-          title: 'Kurslar',
-          tabBarIcon: ({ color }) => <MaterialIcons name="book" size={32} color={color} />,
+          title: 'Alışveriş',
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#000000',
+          },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            color:"white",
+          },
+          tabBarIcon: ({ color }) => <MaterialIcons name="shopping-basket" size={24} color={"white"}  />,
         }}
       />
       <BottomTab.Screen
        name="TabThree"
        component={TabThreeScreen}
        options={{
-         title: 'Hesabım',
-         tabBarIcon: ({ color }) => <MaterialIcons name="account-circle" size={32} color={color} />
+         title: 'Blog',
+         headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#000000',
+          },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            color:"white",
+          },
+         tabBarIcon: ({ color }) => <FontAwesome5 name="microblog" size={24} color={"white"} />
        }}
       />
 
@@ -97,8 +131,16 @@ function BottomTabNavigator() {
        name="TabFour"
        component={TabFourScreen}
        options={{
-         title: 'Kayıtlı Kurslarım',
-         tabBarIcon: ({ color }) => <MaterialIcons name="bookmark" size={32} color={color} />,
+         title: 'İletişim',
+         headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#000000',
+          },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            color:"white",
+          },
+         tabBarIcon: ({ color }) => <MaterialIcons name="phone-in-talk" size={24} color={"white"}  />,
        }}
       />
 
@@ -106,8 +148,16 @@ function BottomTabNavigator() {
        name="TabFive"
        component={TabFiveScreen}
        options={{
-         title: 'İletişim',
-         tabBarIcon: ({ color }) => <MaterialIcons name="phone-android" size={32} color={color} />,
+         title: 'Profil',
+         headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#000000',
+          },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            color:"white",
+          },
+         tabBarIcon: ({ color }) => <FontAwesome name="user" size={24} color={"white"}  />,
        }}
       />
     </BottomTab.Navigator>

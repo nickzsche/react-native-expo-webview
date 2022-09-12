@@ -8,7 +8,7 @@ export default function TabTwoScreen() {
   return (
     <WebView 
     style={styles.container}
-    source={{ uri: 'https://uekapps.github.io' }}
+    source={{ uri: 'https://www.r10.net/e-ticaret-alisveris/' }}
   />
   );
 }

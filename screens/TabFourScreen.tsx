@@ -8,7 +8,7 @@ export default function TabFourScreen() {
   return (
     <WebView 
     style={styles.container}
-    source={{ uri: 'https://nickzsche.github.io/agartha-auto-sql-map' }}
+    source={{ uri: 'https://www.r10.net/iletisim/' }}
   />
   );
 }
