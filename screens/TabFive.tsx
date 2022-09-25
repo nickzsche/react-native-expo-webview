@@ -8,7 +8,7 @@ export default function TabFiveScreen() {
   return (
     <WebView 
     style={styles.container}
-    source={{ uri: 'https://www.r10.net/profil/138286-nickzsche.html' }}
+    source={{ uri: 'https://erto.app/' }}
   />
   );
 }

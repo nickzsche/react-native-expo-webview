@@ -8,7 +8,7 @@ export default function TabThreeScreen() {
   return (
     <WebView 
     style={styles.container}
-    source={{ uri: 'https://www.r10.net/gruplar/' }}
+    source={{ uri: 'https://erto.app/' }}
   />
   );
 }

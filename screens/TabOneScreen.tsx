@@ -9,7 +9,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
   return (
     <WebView 
     style={styles.container}
-    source={{ uri: 'https://sahanhasret.dev/' }}
+    source={{ uri:'https://erto.app/' }}
   />
   );
 }
