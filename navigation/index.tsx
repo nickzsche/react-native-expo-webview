@@ -98,7 +98,7 @@ function BottomTabNavigator() {
         name="TabTwo"
         component={TabTwoScreen}
         options={{
-          title: 'Alışveriş',
+          title: 'Hizmetlerimiz',
           headerTitleAlign: 'center',
           headerStyle: {
             backgroundColor: '#000000',
@@ -107,14 +107,15 @@ function BottomTabNavigator() {
             fontWeight: 'bold',
             color:"white",
           },
-          tabBarIcon: ({ color }) => <MaterialIcons name="shopping-basket" size={24} color={"white"}  />,
+          tabBarIcon: ({ color }) => <MaterialIcons name="business-center" size={24} color={"white"}  />,
         }}
       />
       <BottomTab.Screen
        name="TabThree"
        component={TabThreeScreen}
        options={{
-         title: 'Blog',
+         title: 'Referanslarımız',
+         //headerShown: false, Header gizlemek için kullanılır
          headerTitleAlign: 'center',
           headerStyle: {
             backgroundColor: '#000000',
@@ -123,7 +124,7 @@ function BottomTabNavigator() {
             fontWeight: 'bold',
             color:"white",
           },
-         tabBarIcon: ({ color }) => <FontAwesome5 name="microblog" size={24} color={"white"} />
+         tabBarIcon: ({ color }) => <MaterialIcons name="person-add" size={24} color={"white"}  />,
        }}
       />
 
@@ -140,7 +141,7 @@ function BottomTabNavigator() {
             fontWeight: 'bold',
             color:"white",
           },
-         tabBarIcon: ({ color }) => <MaterialIcons name="phone-in-talk" size={24} color={"white"}  />,
+         tabBarIcon: ({ color }) => <MaterialIcons name="add-ic-call" size={24} color={"white"}  />,
        }}
       />
 
@@ -148,7 +149,7 @@ function BottomTabNavigator() {
        name="TabFive"
        component={TabFiveScreen}
        options={{
-         title: 'Profil',
+         title: 'Hakkımda',
          headerTitleAlign: 'center',
           headerStyle: {
             backgroundColor: '#000000',
@@ -157,7 +158,7 @@ function BottomTabNavigator() {
             fontWeight: 'bold',
             color:"white",
           },
-         tabBarIcon: ({ color }) => <FontAwesome name="user" size={24} color={"white"}  />,
+         tabBarIcon: ({ color }) => <MaterialIcons name="folder-shared" size={24} color={"white"}  />,
        }}
       />
     </BottomTab.Navigator>

@@ -8,7 +8,7 @@ export default function TabFiveScreen() {
   return (
     <WebView 
     style={styles.container}
-    source={{ uri: 'https://erto.app/' }}
+    source={{ uri: 'https://sahanhasret.com.tr/resume-creative-elementor/' }}
   />
   );
 }

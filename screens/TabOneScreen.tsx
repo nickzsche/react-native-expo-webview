@@ -6,10 +6,22 @@ import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+
+  const runFirst = `
+      document.getElementsByClassName('menu-btn')[0].style.display = 'none';
+      document.getElementsByClassName('cart-count').style.display = 'none';
+      true; // note: this is required, or you'll sometimes get silent failures
+    `;
+    const runTwo = `
+    document.getElementsByClassName('mask-lnk')[0].style.display = 'none';
+    
+    
+  `;
   return (
     <WebView 
     style={styles.container}
-    source={{ uri:'https://erto.app/' }}
+    source={{ uri:'https://sahanhasret.com.tr/' }}
+    injectedJavaScript={runTwo+runFirst}
   />
   );
 }
