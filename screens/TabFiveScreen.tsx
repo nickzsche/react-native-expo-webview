@@ -8,7 +8,7 @@ export default function TabFiveScreen() {
   return (
     <WebView 
     style={styles.container}
-    source={{ uri: 'https://erto.app/'  }}
+    source={{ uri: 'https://www.ankarajantlastik.com/index.php?route=information/information&information_id=4'  }}
   />
   );
 }

@@ -5,13 +5,34 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function TabThreeScreen() {
+  const runFirst = `
+  document.getElementsByClassName('nav pull-right')[0].style.display = 'none';
+  true;
+      
+    `;
+    const runTwo = `
+    document.querySelector('footer').style.display = 'none';
+    
+    true;
+    
+  `;
+
+  const runThree = `
+    document.querySelector('swiper-button-next').style.display = 'none';
+    
+    true;
+    
+  `;
   return (
     <WebView 
     style={styles.container}
-    source={{ uri: 'https://erto.app/' }}
+    source={{ uri: 'https://www.ankarajantlastik.com/index.php?route=account/login' }}
+    injectedJavaScript={runFirst+runTwo+runThree}
+    
   />
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {

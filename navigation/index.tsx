@@ -98,7 +98,7 @@ function BottomTabNavigator() {
         name="TabTwo"
         component={TabTwoScreen}
         options={{
-          title: 'Hizmetlerimiz',
+          title: 'Sepetim',
           headerTitleAlign: 'center',
           headerStyle: {
             backgroundColor: '#000000',
@@ -107,14 +107,14 @@ function BottomTabNavigator() {
             fontWeight: 'bold',
             color:"white",
           },
-          tabBarIcon: ({ color }) => <MaterialIcons name="business-center" size={24} color={"white"}  />,
+          tabBarIcon: ({ color }) => <MaterialIcons name="shopping-basket" size={24} color={"white"}  />,
         }}
       />
       <BottomTab.Screen
        name="TabThree"
        component={TabThreeScreen}
        options={{
-         title: 'Referanslarımız',
+         title: 'Giriş Yap/Kaydol',
          //headerShown: false, Header gizlemek için kullanılır
          headerTitleAlign: 'center',
           headerStyle: {
@@ -124,7 +124,7 @@ function BottomTabNavigator() {
             fontWeight: 'bold',
             color:"white",
           },
-         tabBarIcon: ({ color }) => <MaterialIcons name="person-add" size={24} color={"white"}  />,
+         tabBarIcon: ({ color }) => <MaterialIcons name="account-circle" size={24} color="white" />
        }}
       />
 

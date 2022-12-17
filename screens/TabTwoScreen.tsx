@@ -6,20 +6,28 @@ import { Text, View } from '../components/Themed';
 
 export default function TabTwoScreen() {
   const runFirst = `
-      document.getElementsByClassName('menu-btn')[0].style.display = 'none';
+  document.getElementsByClassName('nav pull-right')[0].style.display = 'none';
+  true;
       
-      true; // note: this is required, or you'll sometimes get silent failures
     `;
     const runTwo = `
-    document.getElementsByClassName('mask-lnk')[0].style.display = 'none';
+    document.querySelector('footer').style.display = 'none';
     
+    true;
+    
+  `;
+
+  const runThree = `
+    document.querySelector('swiper-button-next').style.display = 'none';
+    
+    true;
     
   `;
   return (
     <WebView 
     style={styles.container}
-    source={{ uri: 'https://sahanhasret.com.tr/resume-creative-elementor/' }}
-    injectedJavaScript={runTwo+runFirst}
+    source={{ uri: 'https://www.ankarajantlastik.com/index.php?route=checkout/cart' }}
+    injectedJavaScript={runFirst+runTwo+runThree}
     
   />
   );

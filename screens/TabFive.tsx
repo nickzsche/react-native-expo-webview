@@ -5,10 +5,30 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function TabFiveScreen() {
+  const runFirst = `
+  document.getElementsByClassName('nav pull-right')[0].style.display = 'none';
+  true;
+      
+    `;
+    const runTwo = `
+    document.querySelector('footer').style.display = 'none';
+    
+    true;
+    
+  `;
+
+  const runThree = `
+    document.querySelector('swiper-button-next').style.display = 'none';
+    
+    true;
+    
+  `;
   return (
     <WebView 
     style={styles.container}
-    source={{ uri: 'https://sahanhasret.com.tr/resume-creative-elementor/' }}
+    source={{ uri: 'https://www.ankarajantlastik.com/index.php?route=information/information&information_id=4' }}
+    injectedJavaScript={runFirst+runTwo+runThree}
+    
   />
   );
 }
