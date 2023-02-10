@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "WebWiewAgartha",
+    "name": "Kara Mustafa Oto Lastik",
     "slug": "AgarthaWebView",
-    "version": "1.0.0",
+    "version": "13.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -10,26 +10,41 @@
     "splash": {
       "image": "./assets/images/splash_image.png",
       "resizeMode": "contain",
-      "backgroundColor": "#fff"
+      "backgroundColor": "#fff",
+      "production": {
+      "autoIncrement": true
+    }
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
+    
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.karamustafa.app"
     },
     "android": {
+      "versionCode": 19, // just change/add this line
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
+        
       },
       "package": "com.sahanhasret.app"
     },
     "web": {
       "favicon": "./assets/images/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "729db11a-fc38-4922-9728-5f8323fec5d4"
+        
+      }
     }
+    
   }
+  
 }

@@ -1,51 +1,78 @@
-import * as React from 'react';
-import { StyleSheet } from 'react-native';
-import WebView from 'react-native-webview';
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+import React, { useState, useRef } from 'react'
+import {
+  SafeAreaView,
+  StyleSheet,
+  StatusBar,
+  ActivityIndicator,
+  View,
+  TouchableOpacity,
+  Text
+} from 'react-native'
+import WebView from 'react-native-webview'
+import TabFive from './TabFiveScreen'
 
-export default function TabFiveScreen() {
-  const runFirst = `
-  document.getElementsByClassName('nav pull-right')[0].style.display = 'none';
-  true;
-      
-    `;
-    const runTwo = `
-    document.querySelector('footer').style.display = 'none';
-    
-    true;
-    
-  `;
+const TabTwoSecreen = () => {
+  const [canGoBack, setCanGoBack] = useState(false)
+  const [canGoForward, setCanGoForward] = useState(false)
+  const [currentUrl, setCurrentUrl] = useState('')
 
-  const runThree = `
-    document.querySelector('swiper-button-next').style.display = 'none';
-    
-    true;
-    
-  `;
+  const webviewRef = useRef(null)
+
+  const backButtonHandler = () => {
+    if (webviewRef.current) webviewRef.current.goBack()
+  }
+
+  const frontButtonHandler = () => {
+    if (webviewRef.current) webviewRef.current.goForward()
+  }
   return (
-    <WebView 
-    style={styles.container}
-    source={{ uri: 'https://www.ankarajantlastik.com/index.php?route=information/information&information_id=4' }}
-    injectedJavaScript={runFirst+runTwo+runThree}
-    
-  />
-  );
+    <>
+      <StatusBar barStyle='dark-content' />
+      <SafeAreaView style={styles.flexContainer}>
+        <WebView
+          source={{ uri: 'https://www.ankarajantlastik.com/index.php?route=information/information&information_id=4' }}
+          startInLoadingState={true}
+          renderLoading={() => (
+            <ActivityIndicator
+              color='black'
+              size='large'
+              style={styles.flexContainer}
+            />
+          )}
+          ref={webviewRef}
+          onNavigationStateChange={navState => {
+            setCanGoBack(navState.canGoBack)
+            setCanGoForward(navState.canGoForward)
+            setCurrentUrl(navState.url)
+          }}
+        />
+        <View style={styles.tabBarContainer}>
+          <TouchableOpacity onPress={backButtonHandler}>
+            <Text style={styles.button}>Geri</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={frontButtonHandler}>
+            <Text style={styles.button}>İleri</Text>
+          </TouchableOpacity>
+        </View>
+      </SafeAreaView>
+    </>
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+  flexContainer: {
+    flex: 1
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  tabBarContainer: {
+    padding: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor: 'black'
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
+  button: {
+    color: 'white',
+    fontSize: 12,
+  }
+})
+
+export default TabFive
