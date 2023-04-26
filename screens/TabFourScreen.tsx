@@ -11,25 +11,12 @@ import {
 import WebView from 'react-native-webview'
 
 const TabFourScreen = () => {
-  const [canGoBack, setCanGoBack] = useState(false)
-  const [canGoForward, setCanGoForward] = useState(false)
-  const [currentUrl, setCurrentUrl] = useState('')
-
-  const webviewRef = useRef(null)
-
-  const backButtonHandler = () => {
-    if (webviewRef.current) webviewRef.current.goBack()
-  }
-
-  const frontButtonHandler = () => {
-    if (webviewRef.current) webviewRef.current.goForward()
-  }
   return (
     <>
       <StatusBar barStyle='dark-content' />
       <SafeAreaView style={styles.flexContainer}>
         <WebView
-          source={{ uri: 'https://www.ankarajantlastik.com/index.php?route=information/contact' }}
+          source={{ uri: 'https://kamusaglik.net/contact/' }}
           startInLoadingState={true}
           renderLoading={() => (
             <ActivityIndicator
@@ -38,21 +25,9 @@ const TabFourScreen = () => {
               style={styles.flexContainer}
             />
           )}
-          ref={webviewRef}
-          onNavigationStateChange={navState => {
-            setCanGoBack(navState.canGoBack)
-            setCanGoForward(navState.canGoForward)
-            setCurrentUrl(navState.url)
-          }}
+          
         />
-        <View style={styles.tabBarContainer}>
-          <TouchableOpacity onPress={backButtonHandler}>
-            <Text style={styles.button}>Geri</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={frontButtonHandler}>
-            <Text style={styles.button}>İleri</Text>
-          </TouchableOpacity>
-        </View>
+        
       </SafeAreaView>
     </>
   )

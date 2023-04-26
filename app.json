@@ -10,7 +10,7 @@
     "splash": {
       "image": "./assets/images/splash_image.png",
       "resizeMode": "contain",
-      "backgroundColor": "#fff",
+      "backgroundColor": "#00CDE5",
       "production": {
       "autoIncrement": true
     }
@@ -30,7 +30,7 @@
       "versionCode": 19, // just change/add this line
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#00CDE5"
         
       },
       "package": "com.sahanhasret.app"

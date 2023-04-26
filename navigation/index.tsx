@@ -68,7 +68,7 @@ function BottomTabNavigator() {
       screenOptions={{
        
         tabBarStyle: {
-          backgroundColor: '#000',
+          backgroundColor: '#00CDE5',
           borderTopColor: 'transparent'
         }
         
@@ -82,13 +82,14 @@ function BottomTabNavigator() {
           title: 'Ana Sayfa',
           headerTitleAlign: 'center',
           headerStyle: {
-            backgroundColor: '#000000',
+            backgroundColor: '#00CDE5',
           },
           headerTitleStyle: {
             fontWeight: 'bold',
             color:"white",
           },
-          
+          tabBarInactiveTintColor: 'white',
+          tabBarActiveTintColor: 'black',
           tabBarIcon: ({ color }) => <MaterialIcons name="home" size={24} color={"white"}  />,
         })}
       /> 
@@ -98,16 +99,19 @@ function BottomTabNavigator() {
         name="TabTwo"
         component={TabTwoScreen}
         options={{
-          title: 'Sepetim',
+          
+          title: 'Kampanyalar',
           headerTitleAlign: 'center',
           headerStyle: {
-            backgroundColor: '#000000',
+            backgroundColor: '#00CDE5',
           },
           headerTitleStyle: {
             fontWeight: 'bold',
             color:"white",
           },
-          tabBarIcon: ({ color }) => <MaterialIcons name="shopping-basket" size={24} color={"white"}  />,
+          tabBarInactiveTintColor: 'white',
+          tabBarActiveTintColor: 'black',
+          tabBarIcon: ({ color }) => <MaterialIcons name="campaign" size={24} color={"white"}  />,
         }}
       />
       <BottomTab.Screen
@@ -118,12 +122,14 @@ function BottomTabNavigator() {
          //headerShown: false, Header gizlemek için kullanılır
          headerTitleAlign: 'center',
           headerStyle: {
-            backgroundColor: '#000000',
+            backgroundColor: '#00CDE5',
           },
           headerTitleStyle: {
             fontWeight: 'bold',
             color:"white",
           },
+          tabBarInactiveTintColor: 'white',
+          tabBarActiveTintColor: 'black',
          tabBarIcon: ({ color }) => <MaterialIcons name="account-circle" size={24} color="white" />
        }}
       />
@@ -135,12 +141,14 @@ function BottomTabNavigator() {
          title: 'İletişim',
          headerTitleAlign: 'center',
           headerStyle: {
-            backgroundColor: '#000000',
+            backgroundColor: '#00CDE5',
           },
           headerTitleStyle: {
             fontWeight: 'bold',
             color:"white",
           },
+          tabBarInactiveTintColor: 'white',
+          tabBarActiveTintColor: 'black',
          tabBarIcon: ({ color }) => <MaterialIcons name="add-ic-call" size={24} color={"white"}  />,
        }}
       />
@@ -152,12 +160,14 @@ function BottomTabNavigator() {
          title: 'Hakkımda',
          headerTitleAlign: 'center',
           headerStyle: {
-            backgroundColor: '#000000',
+            backgroundColor: '#00CDE5',
           },
           headerTitleStyle: {
             fontWeight: 'bold',
             color:"white",
           },
+          tabBarInactiveTintColor: 'white',
+          tabBarActiveTintColor: 'black',
          tabBarIcon: ({ color }) => <MaterialIcons name="folder-shared" size={24} color={"white"}  />,
        }}
       />
