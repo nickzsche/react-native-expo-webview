@@ -11,18 +11,34 @@ import {
 import WebView from 'react-native-webview'
 
 const TabOneSecreen = () => {
+
+
+  const runFirst = `
+  document.getElementsByClassName('navbar_right')[0].style.display = 'none';
+  true; // note: this is required, or you'll sometimes get silent failures
+`;
+const runTwo = `
+  document.getElementsByClassName('navbarpages navbarpagesbg')[0].style.display = 'none';
+  true; // note: this is required, or you'll sometimes get silent failures
+`;
+
+
+
+
   return (
     <>
       <StatusBar barStyle='dark-content' />
       <SafeAreaView style={styles.flexContainer}>
         <WebView
-          source={{ uri: 'https://kamusaglik.net' }}
+          source={{ uri: 'https://app.kamusaglik.net' }}
           startInLoadingState={true}
+          injectedJavaScript={runFirst+runTwo}
           renderLoading={() => (
             <ActivityIndicator
               color='black'
               size='large'
               style={styles.flexContainer}
+              
             />
           )}
           

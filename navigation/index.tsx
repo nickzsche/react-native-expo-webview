@@ -157,7 +157,7 @@ function BottomTabNavigator() {
        name="TabFive"
        component={TabFiveScreen}
        options={{
-         title: 'Hakkımda',
+         title: 'Poliçelerim',
          headerTitleAlign: 'center',
           headerStyle: {
             backgroundColor: '#00CDE5',
