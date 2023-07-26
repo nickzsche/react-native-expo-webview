@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Kara Mustafa Oto Lastik",
+    "name": "Acentem Mobil",
     "slug": "AgarthaWebView",
     "version": "13.0.0",
     "orientation": "portrait",
@@ -13,18 +13,20 @@
       "backgroundColor": "#00CDE5",
       "production": {
       "autoIncrement": true
+      
     }
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
     
+    
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.karamustafa.app"
+      "bundleIdentifier": "com.acemtemmobil.app"
     },
     "android": {
       "versionCode": 19, // just change/add this line
@@ -33,7 +35,7 @@
         "backgroundColor": "#00CDE5"
         
       },
-      "package": "com.sahanhasret.app"
+      "package": "com.acentemmobil.app"
     },
     "web": {
       "favicon": "./assets/images/icon.png"
@@ -43,7 +45,9 @@
         "projectId": "729db11a-fc38-4922-9728-5f8323fec5d4"
         
       }
-    }
+    },
+
+    
     
   }
   

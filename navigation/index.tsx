@@ -3,7 +3,7 @@
  * https://reactnavigation.org/docs/getting-started
  *
  */
-import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
+import { FontAwesome, Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -22,6 +22,7 @@ import TabThreeScreen from '../screens/TabThreeScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import Icon from 'react-native-ionicons'
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -90,7 +91,7 @@ function BottomTabNavigator() {
           },
           tabBarInactiveTintColor: 'white',
           tabBarActiveTintColor: 'black',
-          tabBarIcon: ({ color }) => <MaterialIcons name="home" size={24} color={"white"}  />,
+          tabBarIcon: ({ color }) => <Ionicons name="home-outline" size={24} color={"white"}  />,
         })}
       /> 
       {/* //Buraya dek sil veya kopyala */}
@@ -100,7 +101,7 @@ function BottomTabNavigator() {
         component={TabTwoScreen}
         options={{
           
-          title: 'Kampanyalar',
+          title: 'Hizmetler',
           headerTitleAlign: 'center',
           headerStyle: {
             backgroundColor: '#00CDE5',
@@ -111,14 +112,14 @@ function BottomTabNavigator() {
           },
           tabBarInactiveTintColor: 'white',
           tabBarActiveTintColor: 'black',
-          tabBarIcon: ({ color }) => <MaterialIcons name="campaign" size={24} color={"white"}  />,
+          tabBarIcon: ({ color }) => <Ionicons name="briefcase-outline" size={24} color={"white"}  />,
         }}
       />
       <BottomTab.Screen
        name="TabThree"
        component={TabThreeScreen}
        options={{
-         title: 'Giriş Yap/Kaydol',
+         title: 'Fırsatlar',
          //headerShown: false, Header gizlemek için kullanılır
          headerTitleAlign: 'center',
           headerStyle: {
@@ -130,32 +131,13 @@ function BottomTabNavigator() {
           },
           tabBarInactiveTintColor: 'white',
           tabBarActiveTintColor: 'black',
-         tabBarIcon: ({ color }) => <MaterialIcons name="account-circle" size={24} color="white" />
+         tabBarIcon: ({ color }) => <Ionicons name="megaphone-outline" size={24} color="white" />
        }}
       />
 
 <BottomTab.Screen
        name="TabFour"
        component={TabFourScreen}
-       options={{
-         title: 'İletişim',
-         headerTitleAlign: 'center',
-          headerStyle: {
-            backgroundColor: '#00CDE5',
-          },
-          headerTitleStyle: {
-            fontWeight: 'bold',
-            color:"white",
-          },
-          tabBarInactiveTintColor: 'white',
-          tabBarActiveTintColor: 'black',
-         tabBarIcon: ({ color }) => <MaterialIcons name="add-ic-call" size={24} color={"white"}  />,
-       }}
-      />
-
-<BottomTab.Screen
-       name="TabFive"
-       component={TabFiveScreen}
        options={{
          title: 'Poliçelerim',
          headerTitleAlign: 'center',
@@ -168,7 +150,26 @@ function BottomTabNavigator() {
           },
           tabBarInactiveTintColor: 'white',
           tabBarActiveTintColor: 'black',
-         tabBarIcon: ({ color }) => <MaterialIcons name="folder-shared" size={24} color={"white"}  />,
+         tabBarIcon: ({ color }) => <Ionicons name="document-text-outline" size={24} color={"white"}  />,
+       }}
+      />
+
+<BottomTab.Screen
+       name="TabFive"
+       component={TabFiveScreen}
+       options={{
+         title: 'Ayarlar',
+         headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#00CDE5',
+          },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            color:"white",
+          },
+          tabBarInactiveTintColor: 'white',
+          tabBarActiveTintColor: 'black',
+         tabBarIcon: ({ color }) => <Ionicons name="settings-outline" size={24} color={"white"}  />,
        }}
       />
     </BottomTab.Navigator>
